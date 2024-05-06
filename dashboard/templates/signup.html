@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sweetalert2.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mdi/css/materialdesignicons.min.css' %}">
+
+</head>
+
+
+<body>
+    <div class="signup_container">
+        <div class="login_box">
+            <h2>Register</h2>
+            <form action="#" id="register_form">
+                {% csrf_token %}
+                <div class="input_box">
+                    <input type="text" name="user_name" required>
+                    <label>User Name</label>
+                </div>
+                <div class="input_box">
+                    <input type="email" name="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input_box">
+                    <input type="password" name="password" id="password" required>
+                    <label>Password</label>
+                    <i class="toggle_password mdi mdi-eye-outline" toggle="#password"></i>
+                </div>
+                
+                <div class="input_box">
+                    <input type="password" name="confirm_password" id="confirm_password" required>
+                    <label>Confirm Password</label>
+                    <i class="toggle_password mdi mdi-eye-outline" toggle="#confirm_password"></i>
+                </div>
+                
+                <button type="submit" class="btn">Register</button>
+            </form>
+        </div>
+        <div class="span_container"></div>
+    </div>
+
+<script>
+    const spanContainer = document.querySelector('.span_container');
+    for (let i = 0; i < 50; i++) {
+        const span = document.createElement('span');
+        span.style.setProperty('--i', i);
+        spanContainer.appendChild(span);
+    }
+</script>
+
+<script type="application/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+<script type="application/javascript" src="{% static 'js/sweetalert2@10.js' %}"></script>
+<script type="application/javascript" src="{%static 'js/index.js'%}"></script>
+
+</body>
+</html>

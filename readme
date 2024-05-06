@@ -1,0 +1,77 @@
+# Django User Authentication
+
+This Django project provides user authentication functionality, including user registration, login, and password hashing. It uses Django's built-in authentication system and provides simple views for signing up, logging in, and accessing the home page.
+
+## Setup
+
+1. Install dependencies:
+
+```
+   pip install Django
+```
+
+2. Project Creation:
+
+   ```
+   django-admin startproject projectname
+   ```
+
+3. Run migrations:
+
+   ```
+   python manage.py migrate
+   ```
+
+
+4. App Creation:
+
+   ```
+   python manage.py appname yourapp
+   ```
+
+
+5. Create a superuser (optional):
+
+   ```
+   python manage.py createsuperuser
+   ```
+
+6. Start the development server:
+
+   ```
+   python manage.py runserver
+   ```
+
+7. Access the application at [http://localhost:8000](http://localhost:8000)
+
+## Usage
+
+### Sign Up
+
+- Access the sign-up page at [http://localhost:8000/signup](http://localhost:8000/signup)
+- Enter your desired username, email, password, and confirm password
+- Click the "Sign Up" button
+
+### Log In
+
+- Access the login page at [http://localhost:8000/login](http://localhost:8000/login)
+- Enter your email and password
+- Click the "Log In" button
+
+### Home Page
+
+- Once logged in, you will be redirected to the home page at [http://localhost:8000/home](http://localhost:8000/home)
+- This page currently serves as a placeholder for the authenticated user's dashboard
+
+## Implementation Details
+
+- The project uses Django's `User` model for authentication and stores passwords securely using the `make_password` function from `django.contrib.auth.hashers`.
+- Views are implemented for sign-up, login, and home pages, each rendering a corresponding HTML template.
+- User input validation is performed to ensure data integrity and security.
+- The project uses Django's built-in authentication system for user authentication and session management.
+
+## Future Improvements
+
+- Enhance the home page to display user-specific information or functionality.
+- Implement password reset functionality.
+- Improve user interface and user experience.

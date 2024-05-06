@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+
+<body>
+    <div class="container">
+        <h1>Welcome! Let's learn, grow, and inspire each other along the way.
+        </h1>
+        <div class="span_container"></div>
+    </div>
+
+<script>
+    const spanContainer = document.querySelector('.span_container');
+    for (let i = 0; i < 50; i++) {
+        const span = document.createElement('span');
+        span.style.setProperty('--i', i);
+        spanContainer.appendChild(span);
+    }
+</script>
+
+<script type="application/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+<script type="application/javascript" src="{% static 'js/sweetalert2@10.js' %}"></script>
+<script type="application/javascript" src="{%static 'js/index.js'%}"></script>
+
+</body>
+</html>
